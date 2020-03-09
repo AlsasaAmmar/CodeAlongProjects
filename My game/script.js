@@ -1,3 +1,6 @@
+/* ///-----------
+configrations
+----------*/
 var scores, roundscore, activePlayer, gamePlaying;
 
 init(); 
@@ -18,7 +21,7 @@ document.querySelector('#roll').addEventListener('click', function() {
     
     var diceDOM = document.querySelector('.dice');
     diceDOM.style.display = 'block'; 
-    diceDOM.src ='dice-' + dice +'.png' ; 
+    diceDOM.src ='/images/dice-' + dice +'.png' ; 
     //3. add the number of the dice to the score unless it's 1
     if (dice === 6 && exDice ===6 ) { 
     scores[activePlayer]= 0 ; 

@@ -4,18 +4,22 @@
         <meta charset="UTF-8">
        <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9a7d3402c6.js" crossorigin="anonymous"></script>
         <link type="text/css" rel="stylesheet" href="style.css">
-        <title>Pig Game 1</title>
+        <title>Pig Game</title>
     </head>
     
     <body> 
         <section class='midbox'>
             <div id='inputBox'>
             <input type="text" id="name" name="name" required
-       minlength="2" maxlength="3" size="10"> </div>
-            <button class='btn' id='newGame'> New Game </button>
-            <button class='btn' id='roll'> Roll Again </button>
-            <button class='btn' id='hold'> Hold </button>
+       minlength="2" maxlength="2" size="10"> </div>
+           
+            <button class='btn' id='newGame'> <i class="far fa-plus-square"></i>
+                New Game </button>
+            <button class='btn' id='roll'>  <i class="fas fa-sync"></i> Roll Again </button>
+            <button class='btn' id='hold'><i class="far fa-arrow-alt-circle-down"></i> Hold </button>
             <div class='playerBox-0 active'>
                 <div><p id='player-0'> Player 1 </p> </div> 
                 <div class='score' id = 'score-0'> 50 </div>
@@ -30,10 +34,10 @@
                <div class= 'current-score' id= 'current-score-1'> 10 </div>
                </div>
 
-            <img src="dice-5.png" alt='Dice' class='dice'>
+            <img src="/images/dice-4.png" alt='Dice' class='dice'>
             </div>    
         </section>
     </body>
-    <script type="text/javascript"  src ='Js.js'></script>
+    <script type="text/javascript"  src ='script.js'></script>
 
 </html>

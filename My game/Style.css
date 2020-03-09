@@ -3,7 +3,7 @@ html {
     height: 100%; 
 }
 body {
-    background-color: darkslategray;
+    background-image: url('images/background.jpg');
     height: 100vp; 
     font-family: 'Titillium Web', sans-serif;
     margin: 0; 
@@ -12,22 +12,25 @@ body {
     background-color: white;
     box-shadow: 7px 10px 182px -8px rgba(0,0,0,0.75);
     position: absolute;
-    width: 60%;
+    width: 60vw;
+    height: 80vh;
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%;
-    overflow: hidden;
+    left: 50%;  
+    display: flex;
+    font-family: 'Lato', sans-serif;
 }
 #name { 
-    position: absolute;
     left: 50%;
-    top 500px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
 }
 #inputBox {
     position: absolute;
-    top: 40px;
-    left: 49%;
-    
+    top: 70vh;
+    left : calc(50% - 25px);
+    width: 50px;
 }
 .score, .current { 
     width: 100px;
@@ -36,7 +39,6 @@ body {
     margin: auto;
 }
 p {
-    padding: 80px;
     padding-bottom: 0px; 
     font-size: 40px;
 }
@@ -45,17 +47,15 @@ p {
     margin-bottom: 50px; 
 }
 .playerBox-0, .playerBox-1 { 
-    width: 50%;
-    display: inline-block; 
-    text-align: center;  
+    text-align: center;
+    width: 50%; 
+    padding: 100px;
 }
-.playerBox-1 {
-    float: right; 
-    margin: 0px; 
-}
+
 .active {
     font-weight: bold; 
-    background: linear-gradient(0deg, rgba(255,255,255,0.08476894175639005) 0%, rgba(249,0,0,0.3816877092633929) 100%);
+    /* box-shadow: inset -69px 0px 217px -86px rgba(0,0,0,0.45); */
+    background-color: rgba(147, 147, 147, 0.50);
     color: red; 
 }
 .current {
@@ -64,32 +64,55 @@ p {
 }
 #current-score-1, #current-score-0 {
     font-size: 50px; 
+    padding: 20px;
 }
 .btn {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    background:  transparent;
     position: absolute;
-    left: 46%; 
     border: none; 
     cursor: pointer; 
+    color: black;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
 }
 #newGame {
     margin: auto;
     top: 20px; 
+    width: 200px;
+    left: calc(50% - 100px);
 }
 #hold {
     top: 400px;
-    left: 48%; 
+    width: 100px;
+    left: calc(50% - 50px);
 }
 #roll {
-    top: 300px;
-    cursor: pointer; 
+    top: 40vh;
+    cursor: pointer;  
+    width: 200px;
+    left: calc(50% - 100px);
 }
 .btn:active {
-    font-weight: bold; 
+    font-weight: bolder; 
 }
 .dice {
     position: absolute; 
-    top: 200px;
-    box-shadow: 0px 0px 152px 1px rgba(0,0,0,0.4);
-    height: 80px;
-    left: 45%; 
+    top: 20vh;
+    box-shadow: 0px 0px 152px 15px rgba(0,0,0,0.4);
+    height: 100px;
+    width: 100px;
+    right: calc(50% - 50px); 
+}
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+    .midbox{
+        width: 100%;
+        height: 100%;
+    }
 }
