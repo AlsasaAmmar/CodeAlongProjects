@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>Pig Game 1</title>
+    </head>
+    
+    <body> 
+        <section class='midbox'>
+            <div id='inputBox'>
+            <input type="text" id="name" name="name" required
+       minlength="2" maxlength="3" size="10"> </div>
+            <button class='btn' id='newGame'> New Game </button>
+            <button class='btn' id='roll'> Roll Again </button>
+            <button class='btn' id='hold'> Hold </button>
+            <div class='playerBox-0 active'>
+                <div><p id='player-0'> Player 1 </p> </div> 
+                <div class='score' id = 'score-0'> 50 </div>
+                <div class='current' id='current-0'> Current
+                <div class= 'current-score' id= 'current-score-0'> 70 </div>
+                </div>
+            </div>
+           <div class='playerBox-1'>
+                <div><p id='player-1'> Player 2 </p> </div> 
+                <div class='score' id = 'score-1'> 40 </div>
+                <div class='current' id='current-1'> Current
+               <div class= 'current-score' id= 'current-score-1'> 10 </div>
+               </div>
+
+            <img src="dice-5.png" alt='Dice' class='dice'>
+            </div>    
+        </section>
+    </body>
+    <script type="text/javascript"  src ='Js.js'></script>
+
+</html>
