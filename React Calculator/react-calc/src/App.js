@@ -16,7 +16,6 @@ function App() {
     setInput(evaluate(`${input}`)); 
   }
  
- 
   return (
     <div className="app">
       <div className="calc-wrapper">

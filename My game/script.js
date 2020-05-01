@@ -2,6 +2,10 @@
 configrations
 ----------*/
 var scores, roundscore, activePlayer, gamePlaying;
+const inputBox = document.querySelector('#input');
+let finalScore = 100; 
+
+
 
 init(); 
 
@@ -21,7 +25,8 @@ document.querySelector('#roll').addEventListener('click', function() {
     
     var diceDOM = document.querySelector('.dice');
     diceDOM.style.display = 'block'; 
-    diceDOM.src ='/images/dice-' + dice +'.png' ; 
+    
+    diceDOM.src ='./images/dice-' + dice +'.png' ; 
     //3. add the number of the dice to the score unless it's 1
     if (dice === 6 && exDice ===6 ) { 
     scores[activePlayer]= 0 ; 
@@ -35,7 +40,7 @@ document.querySelector('#roll').addEventListener('click', function() {
     //next player
        nextPlayer();
     }   
-    exDice= dice 
+    exDice= dice ;
 }});
     
 
@@ -48,21 +53,30 @@ document.querySelector('#hold').addEventListener('click', function() {
     
     
 //check if player wins
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= finalScore) {
         //player wins >> stop the roll and hold.. show the player won
     document.querySelector('#player-' + activePlayer).textContent = 'You Win!';
     document.querySelector('.dice').style.display = 'none'; 
     gamePlaying = false ;
-    
+    inputBox.disabled = false ; 
     } else { 
         nextPlayer(); }
     
 }});
   
 
-document.querySelector('#newGame').addEventListener('click', init); 
+document.querySelector('#newGame').addEventListener('click', startGame); 
 
 
+function startGame() {
+    inputBox.value === '' ? finalScore = 100: finalScore = inputBox.value ;
+    console.log(inputBox.value === '');
+    
+    console.log(finalScore);
+    
+    inputBox.disabled = true ; 
+    init();
+}
 
 function init() {
     scores = [0,0];
@@ -78,9 +92,6 @@ function init() {
     document.querySelector('#player-1').textContent = 'Player 2'; 
     document.querySelector('.playerBox-0').classList.add('active');
     document.querySelector('.playerBox-1').classList.remove('active');
-    
-    
-    
 }
 function nextPlayer() {
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
